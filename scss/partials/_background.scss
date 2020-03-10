@@ -1,0 +1,36 @@
+//nesting background
+.background {
+    color: $background;
+    margin: 20px 0;
+    width: 100%;
+    display: table;
+
+    .container {
+        display: table-cell;
+        vertical-align: bottom;
+        padding-bottom: 20px;
+
+        h1 {
+            font-size: 4rem;
+            color: $yellow;
+            font-family: $font-style;
+            line-height: 105%;;
+            margin-bottom: 0;
+            padding: 0 10%;
+        }
+        p {
+            padding: 0 10%;
+            margin-top: 0;
+            font-size: 1rem;
+        }
+    }
+   
+}
+//mixins image
+.jumbotron{
+    @include backImage('../images/southkorea.jpg');// home page image
+    
+}
+.contimage{
+    @include backImage('../images/contact.jpg');// contact page image
+}

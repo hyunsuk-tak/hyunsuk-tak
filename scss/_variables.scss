@@ -1,0 +1,23 @@
+//font
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Oswald|Roboto:300i,400,400i,500,500i,700&display=swap|Trade+Winds&display=swap');
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Oswald', sans-serif;
+// font-family: 'Anton', sans-serif;
+// font-family: 'Trade Winds';
+$font-body: 'Roboto', sans-serif;
+$font-head: 'Anton', sans-serif;
+$font:'Oswald', sans-serif;
+$font-style: 'Trade Winds';
+$background: #EEE8d6;
+$text-color: #17202A;
+$red:	#FF6347;
+$blue: #0076A3;
+$yellow:  #FFBA00;
+$nav-color: #F39856;
+$white: #fff;
+$gray:#212F3D;
+$roundness: 20px 0 20px 0;
+$color-btns: (
+    next: $yellow,
+    back: $blue );

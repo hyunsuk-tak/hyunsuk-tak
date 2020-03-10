@@ -1,0 +1,114 @@
+.grid {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    .item{
+        margin-bottom: 5px;
+
+    }    
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    h2{
+        text-align: center;
+        color: $yellow;
+        background-color: darken($blue, 5%);
+        margin: 0;
+        padding: 10px;
+    }
+    p{
+        text-align: center;
+       
+        height: auto;
+        margin: 0;
+        padding: 10px;
+    }
+}
+.grid{
+    @include clear;
+    @include break(600px){
+    .item{
+        float: left;
+        @include imageGrid(2,2%);   
+    }
+}
+@include break(960px){
+    .item{
+        float: left;
+        @include imageGrid(3,2%);   
+    }
+}
+}
+.info{
+    @include break(600px){
+        float: left;
+        @include imageGrid(2,2%);
+    }
+}
+.mag{
+    @include break(600px){
+        float: left;
+        @include imageGrid(1,2%);
+        textarea{
+          max-width: 50%;
+          line-height: 2;
+        }
+        .submit{
+            max-width: 30%;
+        }
+    }
+}
+input, textarea  {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  .location{
+      clear: both;
+     text-align: center;
+     margin:10px;
+     padding-top: 5px;
+     a{
+        text-decoration: none;
+        display: block;
+        color: $text-color;
+        padding-bottom: 5px;
+        &:hover{
+            color: $blue;
+        }
+    }   
+}
+
+%btn {
+    display: inline-block;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    user-select: none;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+@each $name , $value in $color-btns{
+    //$i: index($color-btn-names, $name);
+    .btn-#{$name} {
+        @extend %btn;
+       // background-color: nth($color-btn-values, $i);
+         background-color: $value;
+    }
+}
+button a{
+    
+    clear: both;
+    text-decoration: none;
+
+}

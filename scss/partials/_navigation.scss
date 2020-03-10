@@ -1,0 +1,51 @@
+hearder{
+    background-color: $nav-color;
+}
+// navation nesting
+nav{
+    header & {
+        background-color: $nav-color;
+    }
+    .branding{
+        img{
+            width: 50px;
+        }
+        margin-top: 3px;
+        margin-left: 20px;
+        display: none;
+        float: left;
+        overflow: hidden;
+        @include break(1000px){
+        display: block;
+        }
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        @include clear;
+    }
+   
+    ul li{
+         padding: 15px 10px;
+         padding-left: 50px;
+         @include break(760px){
+             float: left;
+         }
+        }
+     a {
+        font-size: 1.5rem;
+        text-decoration:  none;
+        padding: 10px 5px;
+        color: $background;
+        &:hover {
+           color: $blue;
+        }
+        header &:hover {
+            background-color: lighten($nav-color, 5%);
+            padding: 15px 20px;
+            
+        }
+    }       
+    }
+    
